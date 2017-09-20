@@ -51,14 +51,10 @@ header li
     Type selector för att välja ett element.
 */    
 }
-body{
-    background-color: #e9967a;
-    width: 100%;
-    max-width: 800px;
-    margin: 0 auto;
+nav ul ul li:last-child, nav ul ul li:last-child a:hover {
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
 }
-/* :link betyder att alla links i a ska ha en sorts style */
-
 
 a:link {
     color: white;

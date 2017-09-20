@@ -11,13 +11,91 @@
 */    
 }
 body{
-    background-color: #e9967a;
+    background-color: darkgray;
     width: 100%;
-    max-width: 800px;
+    max-width: 1006px;
     margin: 0 auto;
 }
 /* :link betyder att alla links i a ska ha en sorts style */
 
+header nav {
+	height:40px;
+	width:1006px;/*beror på vilken bredd man satt på de enskilda li, i detta fall är de 4 li*200px+margin-right på 1px*/ 
+	display:block;
+	margin:0 auto; /*centrar ul inuiti*/
+	text-align: center;
+	text-transform: uppercase;
+}
+
+
+header nav a{
+	display:block;
+	text-decoration: none;
+	font-family: merriweather;
+	font-weight: bold;
+	font-size:7pt;
+	color:#B8C6D4;
+}
+
+header nav a:hover{
+	background:#71F86C;
+	color:#f0f1f5;
+}
+
+header nav ul{
+	list-style: none;
+  opacity:0.95;
+}
+
+header nav ul li{
+    float:left;/*gör att den flyter till vänster (bättre att göra detta med flexbox)*/
+	width:200px;
+	height:40px;
+	line-height: 40px;
+	background:lightgrey;
+    margin-right:1px;
+}
+
+/*Döljer dropdown*/
+header nav ul ul li{
+	position:relative; /* sätter positionen till vara relativt till sin behållare*/
+	display:none;
+}
+
+/*Döljer submenyn i dropdown*/
+header nav ul ul ul{
+	display:none;
+  
+}
+
+/*Visar dropdown vid hover på ul li*/
+nav ul li:hover ul li{
+    display: block;
+  
+}
+
+/*Visar submenyn i dropdown*/
+nav ul ul li:hover ul{
+	display:block;
+	position:absolute; /*sätter positionen till att absolute mot sin förälder som är satt till att vara relativt*/
+	width:200px; /*samma som ul li*/
+	left:200px; /*absolute position 200px ifrån sin förälder*/
+	top:0px; /*absolute position högst mot sin förälder*/
+  
+}
+nav ul ul li:last-child, nav ul ul li:last-child a:hover {
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+nav span {
+    border-radius: 50%;
+    background-color: darkolivegreen;
+    color:whitesmoke;
+    padding: 6px;
+    font-size: 9px;
+    margin-left: 0.5em;
+}
 
 a:link {
     color: white;
@@ -29,83 +107,30 @@ a:visited {
 
 nav a:hover
 {
-        color: #555;
-}
-header ul
-{
-    background-color: #333;
-    text-align: center;
-    height: 2em;
-    padding-top: 0.3em;
-}
-header li
-/* Regler för hela sidan*/
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Merriweather", sans;
-    text-decoration: none;
-    list-style-type: none;
-/*
-    Type selector för att välja ett element.
-*/    
-}
-body{
-    background-color: #e9967a;
-    width: 100%;
-    max-width: 800px;
-    margin: 0 auto;
-}
-/* :link betyder att alla links i a ska ha en sorts style */
-
-
-a:link {
-    color: white;
-}
-/* Länken fortsätter att vara vit och inte lila */
-a:visited {
-    color: white;
+        color: white;
 }
 
-nav a:hover
-{
-        color: #555;
-}
-header ul
-{
-    background-color: #333;
-    text-align: center;
-    height: 2em;
-    padding-top: 0.3em;
-}
-header li
-{
-    font-size: 1em;
-    display: inline;
-    padding: 3em;
-}
-/* Visar att de måste finnas en h2 innan h3 om vi ska stylea h3*/
+
+
 h2+h3 {
     
         color: greenyellow;
     
     }
+
 .contact
 {
     text-align: center;
     margin-top: 0.5em;
 }
+
 .syndicate {
     background-color: slategrey;
     margin: 1em;
     padding: 0.5em;
     box-shadow: 0.2em 0.2em #B66a57
 }
-.syndicate p:nth-child(2n + 2)
-{
-    color: red;
-  }
+
 /* Descandant selector, går in i olika element/id/klasser för att styla eenskilda element*/
 
 
@@ -116,6 +141,11 @@ h2+h3 {
         padding: 0.5em;
     
 }
+
+.syndicate:nth-child(3n+2) {
+    background: #5b6b74;
+}
+
 .blog_summary {
     background-color: #EE8D73;
     text-align: center;
@@ -137,61 +167,3 @@ h2+h3 {
    förälder, contact är föräldren */
 .tel ~ .web {
     color:white;
-{
-    font-size: 1em;
-    display: inline;
-    padding: 3em;
-}
-/* Visar att de måste finnas en h2 innan h3 om vi ska stylea h3*/
-h2+h3 {
-    
-        color: greenyellow;
-    
-    }
-.contact
-{
-    text-align: center;
-    margin-top: 0.5em;
-}
-.syndicate {
-    background-color: slategrey;
-    margin: 1em;
-    padding: 0.5em;
-    box-shadow: 0.2em 0.2em #B66a57
-}
-
-/* Descandant selector, går in i olika element/id/klasser för att styla eenskilda element*/
-.syndicate p {
-    color: whitesmoke;
-    padding: 0.5;
-    margin-bottom:0.5em;
-}
-.syndicate header h3 {
-    
-        text-align: center;
-    
-        padding: 0.5em;
-    
-}
-.blog_summary {
-    background-color: #EE8D73;
-    text-align: center;
-}
-.blog_summary > span 
-{
-    color: yellow;
-}
-.blog_summary nav li 
-{
-    margin: 0.5em;
-    padding: 0.5em;
-}
-.blog_summary nav li a:hover {
-    color: red;
-}
-/* General sibling selector funkar bara om den 
-   första klassen finns och båda har samma
-   förälder, contact är föräldren */
-.tel ~ .web {
-    color:white;
-}
