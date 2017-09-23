@@ -23,6 +23,27 @@ label {
     font-size:2em;
     cursor:pointer;
 }
+.syndicate {
+    background-color: slategrey;
+    margin: 1em;
+    padding: 0.5em;
+    box-shadow: 0.2em 0.2em #B66a57
+}
+
+/* Descandant selector, går in i olika element/id/klasser för att styla eenskilda element*/
+
+
+.syndicate header h3 {
+    
+        text-align: center;
+    
+        padding: 0.5em;
+    
+}
+
+.syndicate:nth-child(3n+2) {
+    background: #5b6b74;
+}
 
 #nav-toggle {
     display: none;
@@ -35,12 +56,7 @@ label {
 /* :link betyder att alla links i a ska ha en sorts style */
 
 header nav {
-	height:40px;
-	width:1006px;/*beror på vilken bredd man satt på de enskilda li, i detta fall är de 4 li*200px+margin-right på 1px*/ 
-	display:block;
-	margin:0 auto; /*centrar ul inuiti*/
-	text-align: center;
-	text-transform: uppercase;
+	display: none;
 }
 
 
@@ -49,8 +65,8 @@ header nav a{
 	text-decoration: none;
 	font-family: merriweather;
 	font-weight: bold;
-	font-size:7pt;
-	color:white;
+	font-size:10pt;
+    color:white;
 }
 
 header nav a:hover{
@@ -64,26 +80,69 @@ header nav ul{
 }
 
 header nav ul li{
-    float:left;/*gör att den flyter till vänster (bättre att göra detta med flexbox)*/
-	width:200px;
-	height:40px;
-	line-height: 40px;
-	background:lightgrey;
-    margin-right:1px;
+background: darkgrey;
+padding-left: 40px;
 }
 
-nav ul li ul li a{
-    color:white;
+nav ul li ul a{
+    color: black;
   }
+
+
+nav a:hover
+{
+        color: white;
+}
+nav ul li ul a{
+    color: red;
+  }
+
+a:visited {
+    color: red;
+}
   
   /*Den andra undermenyn färgläggs lite annorlunda på mobilen för att kunna skiljas från övre li*/
   nav ul ul li ul a{
-    color:white;
+    color:black;
   }
+
+  nav span {
+    border-radius: 50%;
+    background-color: darkolivegreen;
+    color:whitesmoke;
+    padding: 6px;
+    font-size: 9px;
+    margin-left: 0.5em;
+}
+
 
 @media all and (min-width: 630px){
     label{
         display:none;
+    }
+
+    header nav {
+        display: block;
+        margin: 0 auto;
+        width: 1006px;
+    }
+
+
+    header nav ul li{
+        background: darkgrey;
+        padding: 0px;
+        height: 60px;
+        }
+
+    nav ul {
+        text-align: center;
+    }
+
+    nav ul li {
+        float: left;
+        width: 200px;
+        margin-right: 1px;
+    
     }
 /*Döljer dropdown*/
 header nav ul ul li{
@@ -117,27 +176,6 @@ nav ul ul li:last-child, nav ul ul li:last-child a:hover {
     border-bottom-right-radius: 5px;
 }
 
-nav span {
-    border-radius: 50%;
-    background-color: darkolivegreen;
-    color:whitesmoke;
-    padding: 6px;
-    font-size: 9px;
-    margin-left: 0.5em;
-}
-
-a:link {
-    color: white;
-}
-/* Länken fortsätter att vara vit och inte lila */
-a:visited {
-    color: white;
-}
-
-nav a:hover
-{
-        color: white;
-}
 
 
 
@@ -153,27 +191,6 @@ h2+h3 {
     margin-top: 0.5em;
 }
 
-.syndicate {
-    background-color: slategrey;
-    margin: 1em;
-    padding: 0.5em;
-    box-shadow: 0.2em 0.2em #B66a57
-}
-
-/* Descandant selector, går in i olika element/id/klasser för att styla eenskilda element*/
-
-
-.syndicate header h3 {
-    
-        text-align: center;
-    
-        padding: 0.5em;
-    
-}
-
-.syndicate:nth-child(3n+2) {
-    background: #5b6b74;
-}
 
 .blog_summary {
     background-color: #EE8D73;
