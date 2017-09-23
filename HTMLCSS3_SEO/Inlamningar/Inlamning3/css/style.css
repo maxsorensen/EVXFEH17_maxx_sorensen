@@ -16,6 +16,22 @@ body{
     max-width: 1006px;
     margin: 0 auto;
 }
+
+label {
+    color:red;
+    line-height: 40px;
+    font-size:2em;
+    cursor:pointer;
+}
+
+#nav-toggle {
+    display: none;
+}
+
+#nav-toggle:checked + #wrapper nav {
+    display: block;
+
+}
 /* :link betyder att alla links i a ska ha en sorts style */
 
 header nav {
@@ -34,7 +50,7 @@ header nav a{
 	font-family: merriweather;
 	font-weight: bold;
 	font-size:7pt;
-	color:#B8C6D4;
+	color:white;
 }
 
 header nav a:hover{
@@ -56,6 +72,19 @@ header nav ul li{
     margin-right:1px;
 }
 
+nav ul li ul li a{
+    color:white;
+  }
+  
+  /*Den andra undermenyn färgläggs lite annorlunda på mobilen för att kunna skiljas från övre li*/
+  nav ul ul li ul a{
+    color:white;
+  }
+
+@media all and (min-width: 630px){
+    label{
+        display:none;
+    }
 /*Döljer dropdown*/
 header nav ul ul li{
 	position:relative; /* sätter positionen till vara relativt till sin behållare*/
