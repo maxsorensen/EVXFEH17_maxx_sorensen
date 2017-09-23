@@ -5,10 +5,7 @@
     box-sizing: border-box;
     font-family: "Merriweather", sans;
     text-decoration: none;
-    list-style-type: none;
-/*
-    Type selector för att välja ett element.
-*/    
+    list-style-type: none; 
 }
 body{
     background-color: darkgray;
@@ -30,7 +27,6 @@ label {
     box-shadow: 0.2em 0.2em #B66a57
 }
 
-/* Descandant selector, går in i olika element/id/klasser för att styla eenskilda element*/
 
 
 .syndicate header h3 {
@@ -54,7 +50,7 @@ label {
     display: block;
 
 }
-/* :link betyder att alla links i a ska ha en sorts style */
+
 
 header nav {
     display: none;
