@@ -10,7 +10,7 @@
 body{
     background-color: darkgray;
     width: 100%;
-    max-width: 1006px;
+    max-width: 806px;
     margin: 0 auto;
 }
 /*label för menyn */
@@ -140,7 +140,7 @@ a:visited {
         height: 40px;
         display: block;
         margin: 0 auto;
-        width: 1006px;
+        width: 806px;
     }
 
     /*
