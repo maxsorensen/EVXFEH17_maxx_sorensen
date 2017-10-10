@@ -67,6 +67,8 @@ img {
 
 .flexcard3 {
     background-color: blue;
+    display: flex;
+    flex: 1;
 }
 
 .content {
