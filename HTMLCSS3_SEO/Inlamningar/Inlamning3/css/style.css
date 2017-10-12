@@ -13,13 +13,7 @@ body{
     max-width: 806px;
     margin: 0 auto;
 }
-/*label för menyn */
-label {
-    color:red;
-    line-height: 40px;
-    font-size:2em;
-    cursor:pointer;
-}
+
 .syndicate {
     background-color: slategrey;
     margin: 1em;
@@ -40,6 +34,15 @@ label {
 .syndicate:nth-child(3n+2) {
     background: #5b6b74;
 }
+
+/*label för menyn */
+label {
+    color:red;
+    line-height: 40px;
+    font-size:2em;
+    cursor:pointer;
+}
+
 /* checkbox */
 #nav-toggle {
     display: none;
@@ -57,34 +60,17 @@ header nav {
 }
 
 
-header nav a{
-	display:block;
-	text-decoration: none;
-	font-family: merriweather;
-	font-weight: bold;
-	font-size:10pt;
-    color:white;
-}
 
-header nav a:hover{
-	background:#71F86C;
-	color:#f0f1f5;
-}
 
-header nav ul{
-	list-style: none;
-  opacity:0.95;
-}
+
+
 
 /*  
     regler som bestämmer bakrundsfärgen på mobilens nav
     paddingen som det ska bli för varje ul 
 */
 
-header nav ul li{
-background: darkgrey;
-padding-left: 40px;
-}
+
 
 nav ul li ul a{
     color: red !important;
