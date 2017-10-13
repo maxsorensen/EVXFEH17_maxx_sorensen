@@ -281,25 +281,52 @@ CSS Grid layout for wider screens, when browser supports grid:
 		label{
 			display:none;
 		}
-	
-		header nav ul ul ul {
-			display: none;
-		}
-	
-		header nav ul ul li {
-			display: none;
-		}
-	
+		
+
+
+
 		header nav {
 			display: flex;
-			justify-content: flex-end;
+
 		}
 
-		nav ul li:hover ul li{
+		
+		nav ul {
+			display: flex;
+			flex-direction: row;
+			padding: 0;
+		}
+		
+		
+
+
+
+		nav ul ul li {
+			padding-right: 0.5em 0em;
+		}
+		
+
+		
+		nav ul ul {
+			position: absolute;
+			width: 100%;
+		}
+		
+		
+		nav ul ul li:hover ul li {
 			position: relative;
 			display: block;
+			width: 50px;
+			left: 100%;
+			top: -30px;
 		}
-
+		
+		nav ul ul ul li {
+			display: none;
+		}
+		
+		
+		/* Lägger H2an i linje med menyerna i headern */
 		.masthead {
 			display: flex;
 			align-items: baseline;
@@ -400,7 +427,7 @@ CSS Grid layout for wider screens, when browser supports grid:
 		nav ul ul ul li {
 			display: none;
 		}
-		
+
 		nav ul ul {
 			display: none;
 		}
