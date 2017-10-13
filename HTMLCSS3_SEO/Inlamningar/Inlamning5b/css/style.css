@@ -332,7 +332,8 @@ CSS Grid layout for wider screens, when browser supports grid:
 			align-items: baseline;
 			justify-content: space-between;
 		}
-					
+		
+		
         .cards {
 			display: grid;
 			grid-gap: 1em;
